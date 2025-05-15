@@ -1,0 +1,79 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center mb-5">
+            <h1 class="display-4 text-success">نظرات شما</h1>
+            <p class="lead">شماره تماس و نظر خود را با ما به اشتراک بگذارید</p>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="testimonial-form-container">
+                <h2>فرم ثبت نظر</h2>
+                <form id="testimonialForm">
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">شماره تلفن همراه</label>
+                        <input type="tel" class="form-control" id="phoneNumber" 
+                               placeholder="09xxxxxxxxx" required
+                               pattern="09[0-9]{9}" 
+                               title="شماره تلفن باید با 09 شروع شود و 11 رقمی باشد">
+                        <div class="form-text">شماره شما فقط برای ارتباط ما با شماست و نمایش داده نمی‌شود</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="customerMessage" class="form-label">نظر یا پیشنهاد شما</label>
+                        <textarea class="form-control" id="customerMessage" 
+                                  rows="5" required
+                                  placeholder="نظر خود درباره محصولات ما بنویسید..."></textarea>
+                    </div>
+                    
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i> ارسال نظر
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p>با تشکر از وقتی که برای ثبت نظرتان می‌گذارید</p>
+                <p>نظرات شما به ما در بهبود کیفیت محصولات کمک می‌کند</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('testimonialForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const phone = document.getElementById('phoneNumber').value;
+    const message = document.getElementById('customerMessage').value;
+    
+    // نمایش اسپینر هنگام ارسال
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> در حال ارسال...';
+    submitBtn.disabled = true;
+    
+    // شبیه‌سازی ارسال به سرور (در پیاده‌سازی واقعی باید با بک‌اند ارتباط برقرار کنید)
+    setTimeout(() => {
+        // اینجا در حالت واقعی باید fetch به سرور انجام شود
+        console.log('نظر ارسال شد:', {phone, message});
+        
+        // نمایش پیام موفقیت
+        alert('نظر شما با موفقیت ثبت شد. از مشارکت شما سپاسگزاریم!');
+        
+        // بازگرداندن دکمه به حالت اول
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // پاک کردن فرم
+        e.target.reset();
+    }, 1500);
+});
+</script>
+{% endblock %}
