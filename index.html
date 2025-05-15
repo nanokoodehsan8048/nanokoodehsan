@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- بنر اصلی -->
+<section class="hero-banner" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static 'images/hero-bg.jpg' %}'); background-size: cover; background-position: center; padding: 120px 0; text-align: center; color: white;">
+    <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">تقویت گیاهان با فناوری نانو</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">محصولات با کیفیت نانو کود احسان برای رشد بهتر گیاهان شما</p>
+        <a href="#products" class="primary-btn">مشاهده محصولات</a>
+    </div>
+</section>
+
+<!-- بخش محصولات -->
+<section id="products" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <!-- محصول اول -->
+        <div class="row align-items-center mb-5" style="background-color: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 50px !important;">
+            <div class="col-md-6 p-0">
+                <img src="{% static 'images/product1.jpg' %}" alt="کود هیومیک اسید" style="width: 100%; height: 100%; object-fit: cover; min-height: 350px;">
+            </div>
+            <div class="col-md-6 p-4">
+                <h2 style="color: #2e7d32; margin-bottom: 20px;">کود هیومیک اسید غنی‌شده با نانومگنتیت آهن</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
+                    کود هیومیک اسید تقویت‌شده با نانوذرات مگنتیت آهن، یک فناوری پیشرفته در تغذیه گیاهی است که جذب عناصر ریزمغذی مانند آهن، روی و منگنز را به طرز چشم‌گیری افزایش می‌دهد. حضور نانوذرات مگنتیت باعث بهبود تحرک ریشه و افزایش فعالیت میکروبی در اطراف منطقه ریشه (ریزازون) می‌شود. این محصول به‌ویژه در خاک‌های آهکی و کم‌آهن مؤثر است.
+                </p>
+                <ul style="margin-bottom: 25px; padding-right: 20px;">
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        افزایش جذب عناصر غذایی تا ۳ برابر به‌کمک نانوذرات مگنتیت با خاصیت مغناطیسی
+                    </li>
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        افزایش مقاومت گیاهان به استرس‌های محیطی مانند کم‌آبی، شوری و گرما
+                    </li>
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        مناسب برای انواع محصولات کشاورزی و باغی مانند گندم، جو، درختان میوه، صیفی‌جات، غلات و سبزی‌ها
+
+
+                    </li>
+                </ul>
+                <a href="{% url 'product_humic' %}" class="primary-btn">مشاهده جزئیات</a>
+            </div>
+        </div>
+        
+        <!-- محصول دوم -->
+        <div class="row align-items-center mb-5 flex-md-row-reverse" style="background-color: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 50px !important;">
+            <div class="col-md-6 p-0">
+                <img src="{% static 'images/product2.jpg' %}" alt="کود گیاهان آپارتمانی" style="width: 100%; height: 100%; object-fit: cover; min-height: 350px;">
+            </div>
+            <div class="col-md-6 p-4">
+                <h2 style="color: #2e7d32; margin-bottom: 20px;">کود مخصوص گیاهان آپارتمانی</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
+                    این کود مایع ویژه برای گیاهان آپارتمانی طراحی شده و شامل ترکیبی از عناصر پرمصرف (NPK)، ریزمغذی‌ها، و اسیدهای آمینه است. فرمولاسیون متعادل آن با در نظر گرفتن نیاز گیاهان در محیط‌های بسته تهیه شده تا رشد پایدار، برگ‌های سبز و سالم، و مقاومت در برابر بیماری‌ها را تضمین کند.
+                </p>
+                <ul style="margin-bottom: 25px; padding-right: 20px;">
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        افزایش شادابی برگ‌ها و تقویت سیستم ریشه
+                    </li>
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        بدون بوی ناخوشایند و کاملاً ایمن برای استفاده در محیط داخلی
+                    </li>
+                    <li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+                        فرمول کامل و متعادل (NPK + میکروالمنت‌ها) مخصوص گیاهان آپارتمانی
+						<li style="margin-bottom: 10px; position: relative; padding-right: 25px;">
+                        <i class="fas fa-check" style="color: #2e7d32; position: absolute; right: 0; top: 5px;"></i>
+						قابل استفاده همراه با آبیاری معمول، بدون نیاز به تجهیزات خاص
+
+
+                    </li>
+                </ul>
+                <!-- در هر کجای تمپلیت که دکمه "جزئیات بیشتر" دارید -->
+                <a href="{% url 'product_apartment' %}" class="btn-primary">جزئیات بیشتر</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- بخش مزایا -->
+<section class="py-5" style="background-color: #2e7d32; color: white;">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">چرا نانو کود احسان؟</h2>
+                <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem;">مزایای منحصر به فرد محصولات ما</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <div style="background-color: rgba(255,255,255,0.1); padding: 30px 20px; border-radius: 10px; height: 100%;">
+                    <i class="fas fa-atom fa-3x mb-3" style="color: #c8e6c9;"></i>
+                    <h4 style="margin-bottom: 15px;">فناوری نانو</h4>
+                    <p>استفاده از نانوذرات برای جذب سریعتر و موثرتر مواد مغذی</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div style="background-color: rgba(255,255,255,0.1); padding: 30px 20px; border-radius: 10px; height: 100%;">
+                    <i class="fas fa-leaf fa-3x mb-3" style="color: #c8e6c9;"></i>
+                    <h4 style="margin-bottom: 15px;">طبیعی و ایمن</h4>
+                    <p>فاقد مواد شیمیایی مضر برای گیاهان و محیط زیست</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div style="background-color: rgba(255,255,255,0.1); padding: 30px 20px; border-radius: 10px; height: 100%;">
+                    <i class="fas fa-award fa-3x mb-3" style="color: #c8e6c9;"></i>
+                    <h4 style="margin-bottom: 15px;">تضمین کیفیت</h4>
+                    <p>تایید شده توسط آزمایشگاه‌های معتبر کشاورزی</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
